@@ -2,6 +2,7 @@ from django.shortcuts import render
 
 from products.models import Product, ProductCategory
 
+
 def index(request):
     context = {
         'title': 'Test Title',
@@ -11,7 +12,7 @@ def index(request):
 
 def products(request):
     context = {
-        'title': 'Store - Каталог',
+        'title': 'Store',
         'products': Product.objects.all(),
         'categories': ProductCategory.objects.all(),
     }
